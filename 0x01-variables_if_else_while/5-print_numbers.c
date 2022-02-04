@@ -10,17 +10,13 @@
 
 int main(void)
 {
-	int c = 97;
-	c = 'a';
+	int i = 48;
 
-	do {
-		if (c != 'e' && c != 'q')
-		{
-			putchar(c);
-			c++;
-		} else
-			c++;
-	} while (c <= 'z');
-	putchar ('\n');
+	while (i < 58)
+	{
+		putchar(i);
+		i++;
+	}
+	putchar('\n');
 	return (0);
 }
