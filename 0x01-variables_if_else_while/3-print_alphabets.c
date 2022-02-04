@@ -16,9 +16,9 @@ int main(void)
 	while (c < 123 && a < 90)
 	{
 		putchar(c);
+		putchar('\n');
 		putchar(a);
 		c++;
 	}
-	putchar('\n');
 	return (0);
 }
