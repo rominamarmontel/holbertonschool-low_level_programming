@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int c = 128;
+	int c = 97;
 
 	while (c < 123)
 	{
