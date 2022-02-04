@@ -10,15 +10,13 @@
 
 int main(void)
 {
-	putchar (int _;
+	int c = 128;
 
-	srand(time(0))
-	n = rand() - RAND_MAX / 2;
-
-	for(n='a'; n<='z'; ++n)
-		putchar("%d", n);
+	while (c < 123)
+	{
+		putchar(c);
+		c++;
+	}
+	putchar('\n');
 	return (0);
 }
-
-
-
