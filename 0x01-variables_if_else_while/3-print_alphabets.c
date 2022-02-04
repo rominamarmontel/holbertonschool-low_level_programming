@@ -13,12 +13,16 @@ int main(void)
 	int c = 97;
 	int a = 65;
 
-	while (c < 123 && a < 90)
+	while (c < 123)
 	{
 		putchar(c);
-		putchar('\n');
-		putchar(a);
 		c++;
 	}
+	while (a < 90)
+	{
+		putchar(a);
+		a++;
+	}
+	putchar('\n');
 	return (0);
 }
