@@ -10,15 +10,15 @@
 
 int main(void)
 {
-	int i = 48;
-	int a = 97;
+	int i = 0;
+	int a = 10;
 
-	while (i < 58)
+	while (i < 9)
 	{
 		putchar(i);
 		i++;
 	}
-	while (a < 103)
+	while (a < 16)
 	{
 		putchar(a);
 		a++;
