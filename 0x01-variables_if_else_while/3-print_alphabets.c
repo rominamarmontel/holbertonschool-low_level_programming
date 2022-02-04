@@ -18,7 +18,7 @@ int main(void)
 		putchar(c);
 		c++;
 	}
-	while (a < 90)
+	while (a < 91)
 	{
 		putchar(a);
 		a++;
