@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	putchar n;
+	putchar (int _;
 
 	srand(time(0))
 	n = rand() - RAND_MAX / 2;
 
 	for(n='a'; n<='z'; ++n)
-		putchar("%c", n);
+		putchar("%d", n);
 	return (0);
 }
 
