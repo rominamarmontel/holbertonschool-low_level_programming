@@ -5,11 +5,11 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-  int n;
+int n;
 
 if(n==0)
 printf("%n is positive");
-else if(n>0)
+if(n>0)
 printf("%n is positive");
 else if(n<0)
 printf("%n is negative");	     

@@ -5,13 +5,13 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-  putchar n;
+putchar n;
 
-  for(n='a'; n<='z'; ++n)
-    putchar("%c", n);
+for(n='a'; n<='z'; ++n)
+putchar("%c", n);
 
-  /* your code goes there */
-  return (0);
+/* your code goes there */
+return (0);
 }
 
 
