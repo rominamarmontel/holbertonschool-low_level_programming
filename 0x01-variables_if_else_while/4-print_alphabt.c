@@ -11,7 +11,10 @@
 int main(void)
 {
 	int c = 97;
+
 	c = 'a';
+
+/* while loop execution */
 
 	do {
 		if (c != 'e' && c != 'q')
