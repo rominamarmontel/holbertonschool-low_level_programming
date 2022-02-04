@@ -1,17 +1,24 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+#include <stdio.h>
+/* more headers goes there*/
 
-/* betty style doc for function main goes there */
+/**
+ *main - main
+ *Return:return
+ */
+
 int main(void)
 {
-putchar n;
+	int c = 97;
+	int a = 65;
 
-for(n='a'; n<='z'; ++n)
-putchar("%c", n);
-for(n='A'; n<='Z'; ++n)
-putchar("%c", n);
-
-/* your code goes there */
-return (0);
+	while (c < 123 && a < 90)
+	{
+		putchar(c);
+		putchar(a);
+		c++;
+	}
+	putchar('\n');
+	return (0);
 }
