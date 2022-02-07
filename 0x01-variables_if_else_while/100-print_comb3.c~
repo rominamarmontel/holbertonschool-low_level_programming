@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+/* more headers goes there */
+
+/**
+ *main - main
+ *Return:return
+ */
+
+int main(void)
+{
+	int x = 48;
+	int y = 49;
+
+		while (x < 58, y <58)
+		{
+	        	putchar(xy);
+			x++;
+			y++
+				}
+		putchar('\n');
+		return (0);
+}
