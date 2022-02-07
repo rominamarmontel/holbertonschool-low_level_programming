@@ -1,9 +1,2 @@
-#include <stdio.h>
-/*
- * 8.Intel
- */
- int main(void)
-{
-printf("gcc -S $CFILE.c")
-return (0);
-}
+#!/bin/bash
+gcc -S -masm=intel $CFILE
