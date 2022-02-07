@@ -19,12 +19,12 @@ int main(void)
 		{
 			if (x < y)
 			{
-				putchar(x % 10 + '0');
 				putchar(x / 10 + '0');
+				putchar(x % 10 + '0');
 				putchar(' ');
 				putchar(y / 10 + '0');
 				putchar(y % 10 + '0');
-				if (x != 99 && y != 100)
+				if (x != 98 && y != 100)
 				{
 					putchar(',');
 					putchar(' ');
