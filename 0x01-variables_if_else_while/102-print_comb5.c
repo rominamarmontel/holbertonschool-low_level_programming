@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#include <math.h>
 /* more headers goes there */
 
 /**
@@ -12,16 +13,18 @@ int main(void)
 {
 	int x, y;
 
-	for (x = '0'; x < '100'; x++)
+	for (x = 0; x < 100; x++)
 	{
-		for (y = '0'; y < '100'; y++)
+		for (y = 0; y < 100; y++)
 		{
 			if (x < y)
 			{
-				putchar(x);
+				putchar(x % 10 + '0');
+				putchar(x / 10 + '0');
 				putchar(' ');
-				putchar(y);
-				if (x != '100' && y != '100')
+				putchar(y / 10 + '0');
+				putchar(y % 10 + '0');
+				if (x != 98 && y != 99)
 				{
 					putchar(',');
 					putchar(' ');
