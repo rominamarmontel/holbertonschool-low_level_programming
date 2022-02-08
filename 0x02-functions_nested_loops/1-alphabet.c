@@ -1,28 +1,21 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 /* more headers goes there*/
 
 /**
- *main - check the code
+ *main - print_alphabet
  *
  *Return: Always 0.
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 {
-	char letter;
+	int i;
 
-	letter = 'a';
-	while (letter <= 'z')
+	i = 'a';
+	while (i <= 'z')
 	{
-		putchar(letter);
-		letter++;
+		_putchar(i);
+		i++;
 	}
-}
-
-int main(void)
-{
-	print_alphabet(void);
-	return (0);
+	_putchar('\n');
 }
