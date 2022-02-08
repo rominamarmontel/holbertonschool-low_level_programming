@@ -1,0 +1,14 @@
+#include <main.h>
+#include <stdio.h>
+/* more headers goes there*/
+
+/**
+ *main - main
+ *Return:return
+ */
+
+int main(void)
+{
+	putchar("_putchar");
+	return (0);
+}
