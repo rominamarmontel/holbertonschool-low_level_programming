@@ -5,7 +5,6 @@
  *Description: print +, 0, or - depending on number, along with return
  *Return: Return: 1 if +, 0 if 0, and -1 if -
  */
-
 int print_sign(int n)
 {
 	if (n > 48)
@@ -18,7 +17,7 @@ int print_sign(int n)
 		_putchar('0');
 		return (0);
 	}
-	if (n < 48)
+	else
 	{
 		_putchar('-');
 		return (-1);
