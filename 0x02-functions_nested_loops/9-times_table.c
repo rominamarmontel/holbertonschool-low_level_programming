@@ -16,7 +16,16 @@ void times_table(void)
 			_putchar(' ');
 
 			z = x * y;
+			if (z < 10)
+			{
+				_putchar(' ');
 			_putchar(z + '0');
+			}
+			else
+			{
+				_putchar((z / 10) + '0');
+				_putchar((z % 10) + '0');
+			}
 		}
 		_putchar('\n');
 	}
