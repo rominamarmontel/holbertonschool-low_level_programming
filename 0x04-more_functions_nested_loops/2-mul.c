@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
 * mul(int a, int b) - Write a function that multiplies two
 * integers
@@ -7,7 +6,6 @@
 * @b: the second number
 * Return: void
 */
-
 int mul(int a, int b)
 {
 return (a * b);
