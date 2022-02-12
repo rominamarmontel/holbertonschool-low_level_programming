@@ -20,6 +20,6 @@ int main(void)
 			x = x / i;
 		}
 	}
-	printf("%d", i);
+	printf("%d\n", i);
 	return (0);
 }
