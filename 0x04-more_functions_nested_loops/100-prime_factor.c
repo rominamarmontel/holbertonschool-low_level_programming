@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * the largest prime factor -
- * Return : rien
+ * main - print factor of the number 612852475143
+ * Return: void
  */
 
 int main(void)
@@ -20,6 +20,6 @@ int main(void)
 			x = x / i;
 		}
 	}
-	printf("%ld" , i);
+	printf("%d", i);
 	return (0);
 }
