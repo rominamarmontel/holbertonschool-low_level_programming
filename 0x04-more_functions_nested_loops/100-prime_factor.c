@@ -13,7 +13,7 @@ int main(void)
 	i = 2;
 	x = 612852475143;
 
-	for (i = 2; i <= x; i++)
+	for (i = 2; i < x; i++)
 	{
 		while (x % i == 0)
 		{
