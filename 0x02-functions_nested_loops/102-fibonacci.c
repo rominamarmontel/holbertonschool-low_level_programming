@@ -4,26 +4,26 @@
  *
  * Return: 0
  */
-
 int main(void)
 {
-	int a, b, c, i;
+	int i, f1, f2, f3;
 
-	a = 1;
-	b = 1;
-	for (i = 1, i <= 50; i++)
+	f1 = 1;
+	f2 = 1;
+	for (i = 0; i <= 50; i++)
 	{
-		printf("%d ,", a);
-	}
-	else if (i == 1)
-	{
-		printf("%d ,", b);
+		if (i == 0)
+		{
+			printf("%d ,", f1);
+		}
+		else if (i == 1)
+			printf("%d ,", f2);
 	}
 	else
 	{
-		c = a + b;
-		printf("%d ,", c);
-		a = b;
-		b = c;
-	return (0);
-}
+		f3 = f1 + f2;
+		printf("%d ,", f3);
+		f1 = f2;
+		f2 = f3;
+		return (0);
+	}
