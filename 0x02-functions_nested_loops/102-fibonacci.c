@@ -7,11 +7,13 @@
 
 int main(void)
 {
-	int i;
-	int x;
-	int y;
+	int a, b, c, i;
 
-	for (i = 0, x = 1, y; a <= 50; y = i + x, i = x, x = y)
-	printf("%d ,", i)
+	a = 0;
+	b = 1;
+	for (i = 0, i <= 50; ++i)
+		printf("%d ,", c = a + b);
+	a = b;
+	b = c;
 	return (0);
 }
