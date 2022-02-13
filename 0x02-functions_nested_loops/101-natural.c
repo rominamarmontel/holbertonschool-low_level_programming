@@ -16,7 +16,7 @@ int main(void)
 			sum_i += i;
 			for (x = 0; x <= 1024; x++)
 			{
-				if (x / 3 == 0)
+				if (x / 5 == 0)
 				{
 					sum_x += x;
 				}
