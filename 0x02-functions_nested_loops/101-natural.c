@@ -8,18 +8,12 @@
 int main(void)
 {
 	int i;
-	int x;
-	int sum_i;
-	int sum_x;
 
-	for (i = 0; i <= 1024; i += 3)
-	{
-		sum_i += i;
-		for (i = 0; x <= 1024; x += 5)
+	for (i = 0; i <= 1024; i++)
+		while (i / 3 == 0 || i / 5 == 0)
 		{
-			sum_x += x;
+			sum += i;
+			printf("%d\n", sum);
+			return (0);
 		}
-		printf("%d\n", sum_i + sum_x);
-		return (0);
-	}
 }
