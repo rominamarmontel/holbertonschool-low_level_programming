@@ -7,10 +7,8 @@
  */
 int main(void)
 {
-	int i;
-	int x;
-	int sum_x;
-	int sum_i;
+	int i, x;
+	int sum_i, sum_x;
 
 	for (i = 0; i <= 1024; i++)
 		if (i / 3 == 0)
