@@ -8,11 +8,12 @@
 int main(void)
 {
 	int i;
+	int n;
 
 	for (i = 1; i <= 50; i++)
 	{
-		i = i + (i - 1);
-		printf("%d\n", i);
+		n = i + (i - 1);
+		printf("%d, ", n);
 	}
 	return (0);
 }
