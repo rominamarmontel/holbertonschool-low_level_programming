@@ -12,14 +12,12 @@ int main(void)
 	int sum_i;
 	int sum_x;
 
-	for (i = 0; i <= 1024; i++)
+	for (i = 0; i <= 1024; i += 3)
 	{
-		if (i % 3 == 0)
-			sum_i += i;
-		for (i = 0; x <= 1024; x++)
+		sum_i += i;
+		for (i = 0; x <= 1024; x += 5)
 		{
-			if (x % 5 == 0)
-				sum_x += x;
+			sum_x += x;
 			printf("%d\n", sum_i + sum_x);
 			return (0);
 		}
