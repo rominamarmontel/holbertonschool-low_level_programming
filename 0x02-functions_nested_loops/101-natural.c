@@ -9,14 +9,17 @@ int main(void)
 {
 	int i;
 	int x;
-	int sumx;
-	int sumi;
+	int sum_i;
+	int sum_x;
 
-	for (i = 0; i <= 1024; i += 3)
+	for (i = 0; i <= 1024; i++)
 	{
-		for (i = 0; i <= 1024; i += 5)
-			sumi += i;
-		sumx += x;
-		printf("%d\n", sumi + sumx);
-		return (0);
-	}
+		if (i % 3 == 0)
+			sum_i += i;
+		for (i = 0; x <= 1024; x++)
+		{
+			if (x % 5 == 0)
+				sum_x += x;
+			printf("%d\n", sum_i + sum_x);
+			return (0);
+		}
