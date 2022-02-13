@@ -23,3 +23,5 @@ int main(void)
 			printf("%d\n", sum_i + sum_x);
 			return (0);
 		}
+	}
+}
