@@ -18,8 +18,8 @@ int main(void)
 		for (i = 0; x <= 1024; x += 5)
 		{
 			sum_x += x;
-			printf("%d\n", sum_i + sum_x);
-			return (0);
 		}
+		printf("%d\n", sum_i + sum_x);
+		return (0);
 	}
 }
