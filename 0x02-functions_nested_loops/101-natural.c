@@ -10,6 +10,8 @@ int main(void)
 	int i, x;
 	int sum_i, sum_x;
 
+	sum_i = 0;
+	sum_x = 0;
 	for (i = 0; i <= 1024; i++)
 		if (i % 3 == 0)
 		{
