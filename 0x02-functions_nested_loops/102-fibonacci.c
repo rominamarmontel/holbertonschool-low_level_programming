@@ -8,12 +8,10 @@
 int main(void)
 {
 	int i;
-	int n;
+	int x;
 
-	for (i = 1; i <= 50; i++)
-	{
-		n = (i + 1) + (i + 2);
-		printf("%d, ", n);
-	}
+	if (i == 1 || i == 2)
+		x = (i - 1) + (i - 2);
+	printf("%d ,", x)
 	return (0);
 }
