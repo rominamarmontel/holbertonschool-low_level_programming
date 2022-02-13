@@ -10,7 +10,7 @@ int main(void)
 	int i;
 	int x;
 
-	if (i == 1 || i == 2)
+	for (i = 1; i <= 50; i++)
 		x = (i - 1) + (i - 2);
 	printf("%d ,", x)
 	return (0);
