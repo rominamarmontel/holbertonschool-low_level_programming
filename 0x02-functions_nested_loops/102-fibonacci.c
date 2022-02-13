@@ -12,10 +12,10 @@ int main(void)
 	f1 = 1;
 	f2 = 2;
 	printf("1, 2");
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i <= 48; i++)
 	{
 		f3 = f1 + f2;
-		printf(" ,%d", f3);
+		printf(" ,%lu", f3);
 		f1 = f2;
 		f2 = f3;
 	}
