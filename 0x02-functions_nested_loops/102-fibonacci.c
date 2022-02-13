@@ -9,8 +9,8 @@ int main(void)
 	int i, f1, f2, f3;
 
 	f1 = 1;
-	f2 = 1;
-	for (i = 0; i <= 50; i++)
+	f2 = 2;
+	for (i = 1; i <= 50; i++)
 	{
 		if (i == 0)
 		{
