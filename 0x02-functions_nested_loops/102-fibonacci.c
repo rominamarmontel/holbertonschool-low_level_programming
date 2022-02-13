@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 1; i <= 50; i++)
 	{
-		n = i + 1;
+		n = (i + 1) + (i + 2);
 		printf("%d, ", n);
 	}
 	return (0);
