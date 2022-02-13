@@ -9,9 +9,9 @@ int main(void)
 {
 	int i;
 	int x;
+	int y;
 
-	for (i = 1; i <= 50; i++)
-		x = (i - 1) + (i - 2);
-	printf("%d ,", x)
+	for (i = 0, x = 1, y; a <= 50; y = i + x, i = x, x = y)
+	printf("%d ,", i)
 	return (0);
 }
