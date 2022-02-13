@@ -16,11 +16,14 @@ int main(void)
 		if (i / 3 == 0)
 		{
 			sum_i += i;
-			if (x / 3 == 0)
+			for (x = 0; x <= 1024; x++)
 			{
-				sum_x += x;
+				if (x / 3 == 0)
+				{
+					sum_x += x;
+				}
 			}
-			printf("%d\n", sum_i + sum_x);
-			return (0);
 		}
+	printf("%d\n", sum_i + sum_x);
+	return (0);
 }
