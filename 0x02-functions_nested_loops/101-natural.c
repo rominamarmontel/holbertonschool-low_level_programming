@@ -11,12 +11,12 @@ int main(void)
 	int sum_i, sum_x;
 
 	for (i = 0; i <= 1024; i++)
-		while (i / 3 == 0)
+		if (i % 3 == 0)
 		{
 			sum_i += i;
 			for (x = 0; x <= 1024; x++)
 			{
-				while (x / 5 == 0)
+				if (x % 5 == 0)
 				{
 					sum_x += x;
 				}
