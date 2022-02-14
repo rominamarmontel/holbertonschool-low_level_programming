@@ -2,7 +2,7 @@
 /**
  * puts_half - function
  * @str: param
- * Return: rien
+ * Return: non
  */
 void puts_half(char *str)
 {
