@@ -5,16 +5,13 @@
  * @str: value to be evaluate
  * Return: rien
  */
-
 void _puts(char *str)
 {
-	int n;
+	int i = 0;
 
-	n = 0;
-	while (str[n] != '\0')
+	while (str[i] != 0)
 	{
-		_putchar(str[n]);
-		n++;
+		_putchar(str[i]);
+		i++;
 	}
-	_putchar('\n');
 }
