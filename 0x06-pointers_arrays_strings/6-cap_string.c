@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * cap_string - capitalizes all words of a string
- *
- * Return:
+ * @s: param
+ * Return: s
  */
 
 char *cap_string(char *s)
@@ -19,12 +19,13 @@ char *cap_string(char *s)
 	{
 		j = i - 1;
 		if ((s[j] == ' ' || s[j] == ',' || s[j] == ';' ||
-		s[j] == '.' || s[j] == '!' || s[j] == '?' || s[j] == '"' ||
-		s[j] == '(' || s[j] == ')' || s[j] == '{' || s[j] == '}' ||
-		s[j] == '\t' || s[j] == '\n') && (s[i] >= 97 && s[i] <= 122))
-	        {
+		     s[j] == '.' || s[j] == '!' || s[j] == '?' ||
+		     s[j] == '"' || s[j] == '(' || s[j] == ')' ||
+		     s[j] == '{' || s[j] == '}' || s[j] == '\t' ||
+		     s[j] == '\n') && (s[i] >= 97 && s[i] <= 122))
+		{
 			s[i] -= 32;
-                }
-        }
-return (s);
+		}
+	}
+	return (s);
 }
