@@ -10,9 +10,9 @@ char *leet(char *c)
 {
 	int i = 0;
 	int size;
-	int min[] = {97, 101, 111, 116, 108};
-	int maj[] = {65, 69, 79, 84, 76};
-	int num[] = {52, 51, 48, 55, 49};
+	char *min = "aeotl";
+	char *maj = "AEOTL";
+	char *num = "43071";
 
 	for (size = 0; c[size] != 0; size++)
 	{
