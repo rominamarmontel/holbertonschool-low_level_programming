@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _strcmp - compares two strings
- * @s1: param
- * @s2: param
+ * @s1: parametre
+ * @s2: parametre
  * Return: (*s1 - *s2)
  */
 int _strcmp(char *s1, char *s2)
