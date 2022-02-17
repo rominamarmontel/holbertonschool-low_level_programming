@@ -16,7 +16,7 @@ char *leet(char *c)
 
 	for (size = 0; c[size] != 0; size++)
 	{
-		for (i = 0; i < 4; i++)
+		for (i = 0; i < 5; i++)
 		{
 			if (c[size] == min[i] || c[size] == maj[i])
 				c[size] = num[i];
