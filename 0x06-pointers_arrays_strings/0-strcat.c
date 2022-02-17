@@ -6,15 +6,21 @@
  * @src: parm
  * Return: dest
  */
-
 char *_strcat(char *dest, char *src)
 {
-	char *ptr = dest + strlen(dest);
+	int i = 0;
+	int dlen = 0;
 
-	while (*src != 0)
+	while (dest[dlen])
 	{
-		*ptr++ = *src++;
-	}
-	*ptr = 0;
+		dlen++;
+			}
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[dlen] = src[i];
+		dlen++;
+			}
+	dest[dlen] = '\0';
 	return (dest);
 }
