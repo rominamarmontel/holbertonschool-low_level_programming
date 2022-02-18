@@ -2,16 +2,16 @@
 /**
  *print_alphabet - programm prints [a..z]
  *
- *Return: Always 0.
+ *Return: rien
  */
 
 void print_alphabet(void)
 {
-	char i;
+	char c;
 
-	for (i = 'a'; i <= 'z'; i++)
+	for (c = 97; c <= 122; c++)
 	{
-		_putchar(i);
+		_putchar(c);
 	}
 	_putchar('\n');
 }
