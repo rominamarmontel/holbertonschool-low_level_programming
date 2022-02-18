@@ -10,18 +10,16 @@
 
 int main(void)
 {
-	int c = 97;
-	int a = 65;
+	char min;
+	char maj;
 
-	while (c < 123)
+	for (min = 97; min <= 122; min++)
 	{
-		putchar(c);
-		c++;
+		putchar(min);
 	}
-	while (a < 91)
+	for (maj = 65; maj <= 90; maj++)
 	{
-		putchar(a);
-		a++;
+		putchar(maj);
 	}
 	putchar('\n');
 	return (0);
