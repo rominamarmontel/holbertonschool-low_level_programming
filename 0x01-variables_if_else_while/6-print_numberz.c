@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	int i = 48;
+	int n;
 
-	while (i < 58)
+	for (n = 48; n <= 57; n++)
 	{
-		putchar(i);
-		i++;
+		putchar(n);
 	}
 	putchar('\n');
 	return (0);
+
 }
