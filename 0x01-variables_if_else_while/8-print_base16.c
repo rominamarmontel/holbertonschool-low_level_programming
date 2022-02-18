@@ -10,16 +10,13 @@
 
 int main(void)
 {
-	int n;
-	int c;
+	int n = 48;
 
-	for (n = 48; n <= 57; n++)
+	if (n >= 48 && n <= 57)
 	{
 		putchar(n);
-	}
-	for (c = 97; c <= 102; c++)
-	{
-		putchar(c);
+		putchar(',');
+		n++;
 	}
 	putchar('\n');
 	return (0);

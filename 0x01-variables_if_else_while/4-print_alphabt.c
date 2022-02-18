@@ -10,20 +10,14 @@
 
 int main(void)
 {
-	int c = 97;
+	char c;
 
-	c = 'a';
-
-/* while loop execution */
-
-	do {
-		if (c != 'e' && c != 'q')
+	for (c = 97; c <= 122; c++)
+		if (c != 113 && c != 101)
 		{
 			putchar(c);
-			c++;
-		} else
-			c++;
-	} while (c <= 'z');
-	putchar ('\n');
+		}
+	putchar('\n');
 	return (0);
+
 }

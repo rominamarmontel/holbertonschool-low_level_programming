@@ -10,18 +10,17 @@
 
 int main(void)
 {
-	int i = 48;
+	int n;
+	int j;
 
-	while (i < 58)
-	{
-		putchar(i);
-		if (i != 57)
-		{
-		putchar(',');
-		putchar(' ');
-		}
-		i++;
-	}
+	for (n = 48; n <= 57; n++)
+		for (j = 48; j <= 57; j++)
+			if (n != j)
+			{
+				putchar(n);
+				putchar(j);
+				putchar(', ');
+			}
 	putchar('\n');
 	return (0);
 }
