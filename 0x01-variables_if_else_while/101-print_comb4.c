@@ -10,29 +10,26 @@
 
 int main(void)
 {
-	int x, y, z;
+	int a;
+	int b;
+	int c;
 
-	for (x = '0'; x <= '7'; x++)
-	{
-		for (y = '1'; y <= '8'; y++)
-		{
-			for (z = '2'; z <= '9'; z++)
-			{
-				if (x < y && y < z)
+	for (a = 48; a <= 55; a++)
+		for (b = 49; b <= 56; b++)
+			for (c = 50; c <= 57; c++)
+				if (a != b && b != c && c != a)
+				if (a < b && b < c)
 				{
-					putchar(x);
-					putchar(y);
-					putchar(z);
+					putchar(a);
+					putchar(b);
+					putchar(c);
 
-					if (x != '7' || y != '8' || z != '9')
+					if (a != 55 || b != 56 || c != 57)
 					{
-						putchar(',');
-						putchar(' ');
-					}
+						putchar(44);
+						putchar(32);
+							}
+
 				}
-			}
-		}
-	}
-	putchar('\n');
 	return (0);
 }
