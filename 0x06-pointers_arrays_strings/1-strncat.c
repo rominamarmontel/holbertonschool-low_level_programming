@@ -11,19 +11,21 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int dlen = 0;
-	int j = 0;
+	int i, j;
 
-	while (dest[dlen])
+	i = 0;
+	while (dest[i] != '\0')/* WHILE count character */
 	{
-		dlen++;
+		i++;
 	}
-	while (j < n && src[j])
+
+	j = 0;
+	while (j < n && src[j] != '\0')/* WHILE concatenate dest with src */
 	{
-		dest[dlen] = src[j];
-		dlen++;
+		dest[i] = src[j];
+		i++;
 		j++;
 	}
-	dest[dlen + n + 1] = '\0';
+	dest[i] = '\0';/* add null byte */
 	return (dest);
 }
