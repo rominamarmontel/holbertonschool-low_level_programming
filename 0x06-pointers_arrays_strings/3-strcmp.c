@@ -7,17 +7,15 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	while ((*s1 != 0 && *s2 != 0) && *s1 == *s2)
+	int i = 0;
+
+	while (s1[i] != '\0' && s2[i] != '\0')/* while the same character */
 	{
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])/* if different */
+		{
+			return (s1[i] - s2[i]);/* ASCII 72-87 */
+		}
+		i++; /* inc */
 	}
-	if (*s1 == *s2)
-	{
-		return (0);
-	}
-	else
-	{
-		return (*s1 - *s2);
-	}
+	return (0); /* if the same */
 }
