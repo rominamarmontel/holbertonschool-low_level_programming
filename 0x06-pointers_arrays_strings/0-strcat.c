@@ -23,6 +23,6 @@ char *_strcat(char *dest, char *src)
 		i++;
 		j++;
 	}
-	dest[i] = '\0';/* add null byte to dest*\/ */
-	/* return (dest); */
+	dest[i] = '\0';/* add null byte to dest*/
+	return (dest);
 }
