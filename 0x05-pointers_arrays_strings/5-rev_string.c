@@ -10,12 +10,14 @@ void rev_string(char *s)
 	int len = 0;
 	int temp;
 
-	while (s[len] != 0)
-		len++;
-	for (i = 0; i < len / 2; i++)
+	while (s[len] != '\0')/*count size of string */
 	{
-		temp = s[i];
-		s[i] = s[len - i - 1];
-		s[len - i - 1] = temp;
+		len++;
+	}
+	for (i = 0; i < len / 2; i++) /* count loop number with len/2 */
+	{
+		temp = s[i]; /* temp ni s[0]=H wo dainyu */
+		s[i] = s[len - i - 1]; /* s[0]=5-0-1=4=L wo dainyu */
+		s[len - i - 1] = temp; /* s=4 ni temp=H wo dainyu */
 	}
 }
