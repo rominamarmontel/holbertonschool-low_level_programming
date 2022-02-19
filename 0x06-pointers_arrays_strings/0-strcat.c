@@ -8,19 +8,21 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int dlen = 0;
+	int i, j;
 
-	while (dest[dlen])
+	i = 0;
+	while (dest[i] != '\0')/*WHILE count character */
 	{
-		dlen++;
-			}
+		i++;
+	}
 
-	for (i = 0; src[i] != '\0'; i++)
+	j = 0;
+	while (src[j] != '\0')/*WHILE concatenate dest with src*/
 	{
-		dest[dlen] = src[i];
-		dlen++;
-			}
-	dest[dlen] = '\0';
-	return (dest);
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';/* add null byte to dest*\/ */
+	/* return (dest); */
 }
