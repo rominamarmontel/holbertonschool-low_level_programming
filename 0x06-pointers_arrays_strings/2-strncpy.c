@@ -11,18 +11,13 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
-	int j = 0;
 
-	while (src[j])
-	{
-		j++;
-	}
-	while (i < n && src[i])
+	while (i < n && src[i] != '\0')/* while copy, n is smaller than i */
 	{
 		dest[i] = src[i];
 		i++;
-			}
-	while (i < n)
+	}
+	while (i < n)/* add NULL to dest when n is smaller than i */
 	{
 		dest[i] = '\0';
 		i++;
