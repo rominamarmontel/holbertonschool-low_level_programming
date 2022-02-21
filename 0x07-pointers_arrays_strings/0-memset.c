@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _memset - fills the memory area with the specified characters
+ * _memset - fill the memory area with the specified characters
  * @s: pointer to the memory
  * @b: letter to set in the memory
  * @n: number of byte to set b
- * Return: the memory area s
+ * Return: s
  */
 
 char *_memset(char *s, char b, unsigned int n)
