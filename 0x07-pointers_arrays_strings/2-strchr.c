@@ -5,7 +5,6 @@
  * @c: character to find
  * Return: the pointer of last character or NULL
  */
-
 char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
@@ -14,7 +13,7 @@ char *_strchr(char *s, char c)
 		{
 			return (s);
 		}
-		++s;
+		s++;
 	}
 	return (0);
 }
