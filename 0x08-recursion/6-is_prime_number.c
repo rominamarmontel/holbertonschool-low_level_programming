@@ -7,14 +7,14 @@
  * @b:int
  * Return:int
  */
-int sosu(int a, int b)
+int sosu(int n, int x)
 {
-	if (a < b * b)
+	if (x > n / 2)
 		return (1);
-	else if (a % b == 0)
+	else if (n % x == 0)
 		return (0);
 	else
-		return (sosu(a + 1, b));
+		return (sosu(n, x + 1));
 }
 
 /**
@@ -25,7 +25,7 @@ int sosu(int a, int b)
 
 int is_prime_number(int n)
 {
-	if (n == 2)
-		return (1);
-	return (sosu(2, n));
+	if (n < 2)
+		return (0);
+	return (sosu(n, 2));
 }
