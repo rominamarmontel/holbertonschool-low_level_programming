@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print name of program
+ * main - print num of arg
  * @argv: int
  * @argc: string
  * Return: 0
@@ -9,10 +9,6 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc == 1)
-	{
-		(void)*argv;
-	printf("%s\n", argv[0]);
-	}
+	printf("%d\n", argc);
 	return (0);
 }
