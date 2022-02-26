@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char n;
+	int n; /* you are not allowed to use type char */
 
 	for (n = 48; n <= 57; n++)
 	{
