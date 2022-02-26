@@ -10,17 +10,19 @@
 
 int main(void)
 {
-	int n;
-	int j;
+	char n;
 
 	for (n = 48; n <= 57; n++)
-		for (j = 48; j <= 57; j++)
-			if (n != j)
-			{
-				putchar(n);
-				putchar(j);
-				putchar(', ');
-			}
+	{
+		if (n != 57)
+		{
+			putchar(n);
+			putchar(44);
+			putchar(32);
+		}
+		else
+		putchar(n);
+	}
 	putchar('\n');
 	return (0);
 }
