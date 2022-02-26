@@ -14,9 +14,9 @@ int main(void)
 	int b;
 	int c;
 
-	for (a = 48; a <= 55; a++)
-		for (b = 49; b <= 56; b++)
-			for (c = 50; c <= 57; c++)
+	for (a = '0'; a <= '7'; a++)
+		for (b = '1'; b <= '8'; b++)
+			for (c = '2'; c <= '9'; c++)
 				if (a != b && b != c && c != a)
 				if (a < b && b < c)
 				{
@@ -24,12 +24,11 @@ int main(void)
 					putchar(b);
 					putchar(c);
 
-					if (a != 55 || b != 56 || c != 57)
+					if (a != '7' || b != '8' || c != '9')
 					{
-						putchar(44);
-						putchar(32);
-							}
-
+						putchar(',');
+						putchar(' ');
+					}
 				}
 	putchar('\n');
 	return (0);
