@@ -11,12 +11,17 @@
 int main(void)
 {
 	int n = 48;
+	int a = 97;
 
-	if (n >= 48 && n <= 57)
+	while (n <= 57)
 	{
 		putchar(n);
-		putchar(',');
 		n++;
+	}
+	while (a <= 103)
+	{
+		putchar(a);
+		a++;
 	}
 	putchar('\n');
 	return (0);
