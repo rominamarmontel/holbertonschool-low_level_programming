@@ -9,7 +9,7 @@
 
 char *_strdup(char *str)
 {
-	char *duplicate;
+	char *duplicate;/*destination*/
 	int i;
 	int size = 0;
 
@@ -19,15 +19,15 @@ char *_strdup(char *str)
 	for (i = 0; str[i]; i++)/*count number of string */
 	{
 	}
-	duplicate = malloc((size + 1) * sizeof(char));/* calcul size of byte */
+	duplicate = malloc((i + 1) * sizeof(char));/* calcul size of byte */
 
 	if (duplicate == 0)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	for (size = 0; size < i; size++)
 	{
-		duplicate[i] = str[i];
+		duplicate[size] = str[size];
 	}
 	return (duplicate);
 }
