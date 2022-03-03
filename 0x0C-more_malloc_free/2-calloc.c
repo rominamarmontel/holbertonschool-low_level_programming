@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * array_range - creates an array of integers
+ * _calloc - allocates memory for an array
  * @nmemb: param
  * @size: param
  * Return: pointer
