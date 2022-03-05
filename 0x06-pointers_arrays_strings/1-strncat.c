@@ -11,21 +11,17 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, j;
+	int i;
+	int j;
 
-	i = 0;
-	while (dest[i] != '\0')/* WHILE count character */
+	for (i = 0; dest[i] != '\0'; i++)/*count size dest*/
 	{
-		i++;
 	}
-
-	j = 0;
-	while (j < n && src[j] != '\0')/* WHILE concatenate dest with src */
+	for (j = 0; src[j] != '\0' && j < n; j++)/*count size src until n*/
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		dest[i] = src[j];/*concatenate j to dest*/
+		i++;/*don't forget to increment i*/
 	}
-	dest[i] = '\0';/* add null byte */
+	dest[i] = 0;/*add 0 to dest*/
 	return (dest);
 }
