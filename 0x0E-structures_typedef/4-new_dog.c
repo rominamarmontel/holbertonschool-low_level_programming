@@ -18,19 +18,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int len; /*length of a new dog*/
 	dog_t *new; /*new dog*/
 
-	for (i = 0; name[i] != '\0'; i++) /*count size of name*/
+	for (i = 0; name[i] != '\0'; i++)
 	{
 	}
-	for (j = 0; owner[j] != '\0'; j++) /*count size of owner*/
+	for (j = 0; owner[j] != '\0'; j++)
 	{
 	}
 
 	new = malloc(sizeof(dog_t)); /*allocation for new dog*/
-	if (new == NULL || name == NULL || owner == NULL)
+	if (new == NULL)
 		return (0);/*if NULL return NULL*/
 
 	new->name = malloc((i + 1) * sizeof(char)); /*alloc name new dog*/
-	new->owner = malloc((j + 1) * sizeof(char)); /*alloc owner of new dog*/
+	new->owner = malloc((j + 1) * sizeof(char)); /*alloc owner new dog*/
 
 	for (len = 0; name[len] != '\0'; len++)/*count name of new dog*/
 	{
