@@ -37,10 +37,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		new->name[len] = name[len];/*copy name of new dog*/
 	}
+	new->name[len] = 0;
 	for (len = 0; owner[len] != '\0'; len++)/*count owner of new dog*/
 	{
 		new->owner[len] = owner[len];/*copy owner of new store*/
 	}
+	new->owner[len] = 0;
 	new->age = age;/*copy age of new dog*/
 	return (new);
 }
