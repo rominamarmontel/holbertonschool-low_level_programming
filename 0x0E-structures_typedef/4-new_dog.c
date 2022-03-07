@@ -15,8 +15,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i; /*dog name*/
 	int j; /*owner name*/
-	int len; /*length of a new dog*/
 	dog_t *new; /*new dog*/
+
+	new = malloc(sizeof(dog_t));
+	if (new == NULL)
+		return (NULL);
 
 	for (i = 0; name[i] != '\0'; i++)
 	{
@@ -25,23 +28,20 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 	}
 
-	new = malloc(sizeof(dog_t)); /*allocation for new dog*/
-	if (new == NULL)
-		return (0);/*if NULL return NULL*/
+	new->name = malloc((i + 1) * sizeof(char));
+	new->owner = malloc((j + 1) * sizeof(char));
 
-	new->name = malloc((i + 1) * sizeof(char)); /*alloc name new dog*/
-	new->owner = malloc((j + 1) * sizeof(char)); /*alloc owner new dog*/
+	for (i = 0; name[i] != '\0'; i++)
+	{
+		new->name[i] = name[i];
+	}
+	new->name[i] = '\0';
 
-	for (len = 0; name[len] != '\0'; len++)/*count name of new dog*/
+	for (j = 0; owner[j] != '\0'; j++)
 	{
-		new->name[len] = name[len];/*copy name of new dog*/
+		new->owner[j] = owner[j];
 	}
-	new->name[len] = '\0';
-	for (len = 0; owner[len] != '\0'; len++)/*count owner of new dog*/
-	{
-		new->owner[len] = owner[len];/*copy owner of new store*/
-	}
-	new->owner[len] = '\0';
-	new->age = age;/*copy age of new dog*/
+	new->owner[j] = '\0';
+	new->age = age;
 	return (new);
 }
