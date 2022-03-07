@@ -18,7 +18,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int len; /*length of a new dog*/
 	dog_t *new; /*new dog*/
 
-
 	for (i = 0; name[i] != '\0'; i++) /*count size of name*/
 	{
 	}
