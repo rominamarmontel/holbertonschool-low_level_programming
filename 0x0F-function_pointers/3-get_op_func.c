@@ -20,5 +20,7 @@ op_t ops[] = {
 int i;
 
 for (i = 0; *(ops[i].op) !=  *s && ops[i].op != NULL; i++)
+{
+}
 return (NULL);
 }
