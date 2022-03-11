@@ -35,9 +35,10 @@ void pr_float(va_list args)
 void pr_str(va_list args)
 {
 	char *str;
+
 	str = va_arg(args, char*);
 
-	if(str == NULL)
+	if (str == NULL)
 		str = ("(nil)");
 	printf("%s", str);
 }
