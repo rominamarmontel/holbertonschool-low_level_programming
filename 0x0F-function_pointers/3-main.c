@@ -18,7 +18,8 @@ int main(int argc, char *argv[])/*calc num1 operator num*/
 		printf("Error\n");
 		exit(98);
 	}
-	if (get_op_func(argv[2]) == NULL)/*if operator is none of the list*/
+	if (argv[2][1] == '\0' || get_op_func(argv[2]) == NULL)
+/*if operator is none of the list*/
 	{
 		printf("Error\n");
 		exit(99);
