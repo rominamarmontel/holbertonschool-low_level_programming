@@ -4,7 +4,7 @@
 
 /**
  * get_op_func - select the correct function
- * @s: param
+ * @s: operator passed as argument
  * Return: 0
  */
 
