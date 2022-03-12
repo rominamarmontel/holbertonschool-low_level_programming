@@ -7,11 +7,11 @@
  * @op: The operator
  * @f: The function associated
  */
-typedef struct op
+typedef struct op/* struct name = op */
 {
-	char *op;
+	char *op;/* type data + member hensu */
 	int (*f)(int a, int b);
-} op_t;
+} op_t;/* struct op -> op_t */
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
