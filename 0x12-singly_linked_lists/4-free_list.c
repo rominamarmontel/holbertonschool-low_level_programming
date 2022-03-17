@@ -3,18 +3,14 @@
 /**
  * free_list - fonction
  * @head: param
- * Return: rien
  */
 
 void free_list(list_t *head)
 {
-	list_t *temp;
-
-	if (head)
+	if (head != NULL)
 	{
-		temp = head->next;
 		free(head->str);
-		free(head);
-		head = temp;
+		free_list(head->next);
 	}
+	free(head);
 }
