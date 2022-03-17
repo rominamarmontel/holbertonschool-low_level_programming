@@ -2,25 +2,20 @@
 /**
  * print_list - fonction
  * @h: head of data
- * Return: count the number
+ * Return: total number of node
  */
 
 size_t print_list(const list_t *h) /*print all the elements of a list_t list*/
 {
-	int i;
-	size_t number = 0; /*node no kazu*/
-	const list_t *node; /*node of list_t*/
+	size_t number; /*node no kazu*/
 
-	node = h; /*node ga head ni aru*/
-
-	for (i = 0; node; i++)
+	for (number = 0; h != NULL; number++)
 	{
-		if (node->str == NULL)/*if node of string is  NULL*/
+		if (h->str == NULL)/*if node of string is  NULL*/
 			printf("[0] (nil)\n");
 		else
-			printf("[%d] %s\n", node->len, node->str);
-		node = node->next;/*tsugi no node wo sasu*/
-		number++;/*node no kazu incriment*/
+			printf("[%d] %s\n", h->len, h->str);
+		h = h->next;/*tsugi no node wo sasu*/
 	}
-	return (number);/*node no kazu = number of node elements*/
+	return (number);/*node no kazu = total number of node elements*/
 }
