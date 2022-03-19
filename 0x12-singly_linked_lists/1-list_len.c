@@ -4,13 +4,13 @@
  * @h: head of data
  * Return: the number of elements
  */
-size_t list_len(const list_t *h)
+size_t list_len(const list_t *h)/*returns the number of elements in a list_t*/
 {
-	size_t number; /*node no kazu*/
+	size_t i;
 
-	for (number = 0; h != NULL; number++)
+	for (i = 0; h != NULL; i++)
 	{
-		h = h->next;/*next of head wo head ni dainyu*/
+		h = h->next;
 	}
-	return (number);/*node no kazu = number of node elements*/
+	return (i);
 }
