@@ -7,15 +7,15 @@
 
 size_t print_list(const list_t *h) /*print all the elements of a list_t list*/
 {
-	size_t number; /*node no kazu*/
+	size_t n; /*node no kazu*/
 
-	for (number = 0; h != NULL; number++)
+	for (n = 0; h != NULL; n++) /*h = head of node */
 	{
-		if (h->str == NULL)/*if node of string is  NULL*/
+		if (h->str == NULL)/*if string of head is NULL = aucun linked list*/
 			printf("[0] (nil)\n");
 		else
-			printf("[%d] %s\n", h->len, h->str);
-		h = h->next;/*tsugi no node wo sasu*/
+			printf("[%d] %s\n", h->len, h->str);/*length of head, string of head*/
+		h = h->next;/*pointer of head wo head ni dainyu*/
 	}
-	return (number);/*node no kazu = total number of node elements*/
+	return (n);/*node no kazu = total number of node elements*/
 }
