@@ -1,17 +1,16 @@
 #ifndef _CALC_H
 #define _CALC_H
-
 /**
  * struct op - Struct op
  *
  * @op: The operator
  * @f: The function associated
  */
-typedef struct op/* struct name = op */
+typedef struct op
 {
-	char *op;/* type data + member hensu */
+	char *op;
 	int (*f)(int a, int b);
-} op_t;/* struct op -> op_t */
+} op_t;
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
