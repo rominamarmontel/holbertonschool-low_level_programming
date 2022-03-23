@@ -6,12 +6,12 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *newfree;
+	listint_t *temp;
 
-	while (head)
+	while (head != NULL)
 	{
-		newfree = head->next;
-		free(head);
-		head = newfree;
+		temp = head->next;/*temp wo head kara susumeru */
+		free(head);/*hitotsu no head value wo free*/
+		head = temp;/*head ni temp wo irete tsugini susumu*/
 	}
 }
