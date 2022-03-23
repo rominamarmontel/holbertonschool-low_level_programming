@@ -18,22 +18,22 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
-	new->n = n;
-	if (idx == 0)
+	new->n = n; /*new no data ni n wo ireru*/
+	if (idx == 0) /*index ga 0 no baai*/
 	{
-		new->next = *head;
-		*head = new;
+		new->next = *head; /*new->next ni head no nakami wo ireru*/
+		*head = new; /*head ni new no adress wo ireru*/
 	}
 	else
 	{
-		for (i = 1; i < idx; i++)
+		for (i = 1; i < idx; i++) /*i ga 1kara idx made incriment*/
 		{
-			if (temp->next == NULL)
+			if (temp->next == NULL)/*node no tsuika ga damenara*/
 				return  (NULL);
-			temp = temp->next;
+			temp = temp->next;/*temp wo susumeru*/
 		}
 		new->next = temp->next;
-		temp->next = new;
+		temp->next = new;/*temp->next ni new no adress wo ireru*/
 	}
 	return (new);
 }
