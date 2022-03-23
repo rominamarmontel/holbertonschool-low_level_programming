@@ -9,35 +9,33 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	unsigned int i;
-	list_t *newnode; /*new node*/
-	list_t *lastnode;
+	list_t *new;
+	list_t *temp;
 
 	for (i = 0; str[i] != '\0'; i++) /*count string*/
 	{
 	}
-	newnode = malloc(sizeof(list_t)); /*malloc for copy dest*/
-	if (newnode == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 	{
-		free(newnode);/*nakutemoii*/
 		return (NULL);
 	}
-	newnode->str = strdup(str); /*copy string to newnode string*/
-	newnode->len = i; /*copy length string to newnode string*/
-	newnode->next = NULL; /*newnode no adress wa null*/
-
+	new->str = strdup(str);
+	new->len = i; /*count shita string wo new ni dainyu*/
+	new->next = NULL; /*saigo ni tsuika surukara next wa null*/
 	if (*head == NULL)
 	{
-		*head = newnode;
-		return (*head);/*nakutemoii*/
+		*head = new; /*head no nakami ni new wo ireru*/
+		return (*head);
 	}
-	else
+	else /*if head != NULL*/
 	{
-		lastnode = *head;
-		while (lastnode->next != NULL)
+		temp = *head; /*temp wo head kara hajimeru*/
+		while (temp->next != NULL)/*list no saigomade temp wo susumeru*/
 		{
-			lastnode = lastnode->next;
+			temp = temp->next;
 		}
-	}
-	lastnode->next = newnode;
-	return (newnode);
+	} /*loop kara nukeruto null no temae*/
+	temp->next = new; /*new no mae no node ni new no adress wo ireru*/
+	return (new);
 }
