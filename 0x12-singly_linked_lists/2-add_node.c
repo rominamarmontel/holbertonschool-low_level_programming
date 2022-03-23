@@ -7,22 +7,19 @@
  */
 
 list_t *add_node(list_t **head, const char *str)
-{/*adds a new node at the beginning of a list_t*/
-	unsigned int i;
-	list_t *temp; /*new node*/
+{
+	list_t *new;
+	unsigned int i = 0;
 
 	for (i = 0; str[i] != '\0'; i++) /*count string before adding*/
 	{
 	}
-	temp = malloc(sizeof(list_t)); /*malloc for copy dest*/
-	if (temp == NULL)
-	{
-		free(temp);
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
-	}
-	temp->str = strdup(str);/*temp ni string of node wo dainyu*/
-	temp->len = i;/*temp ni length of node wo dainyu*/
-	temp->next = *head;/*temp ni adress of head wo dainyu*/
-	*head = temp;/*head ni temp wo dainyu*/
-	return (temp);
+	new->str = strdup(str);
+	new->len = i;
+	new->next = *head;/*new->next ni head no nakami wo ireru*/
+	*head = new;/*head no nakami ni new no adress wo ireru*/
+	return (new);
 }
