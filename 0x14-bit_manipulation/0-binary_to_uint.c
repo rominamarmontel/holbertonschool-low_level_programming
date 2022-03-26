@@ -20,8 +20,8 @@ unsigned int binary_to_uint(const char *b)
 		if (b[i] != '1' && b[i] != '0')/*string b ga 1 demo 0 demonai*/
 			return (0);
 		if (b[i] == '1')/*string b ga 1 notoki*/
-			sum = sum + mul;/*mul wo tasu*/
-			mul *= 2;/*mul wa 2 wo kakeru*/
+		sum += mul;/*mul wo tasu*/
+		mul *= 2;/*mul wa 2 wo kakeru*/
 	}
 	return (sum);
 }
