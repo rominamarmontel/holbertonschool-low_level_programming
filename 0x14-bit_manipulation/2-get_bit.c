@@ -7,11 +7,8 @@
  */
 
 int get_bit(unsigned long int n, unsigned int index)
-{
-	if (index > (sizeof(n) * 8))
+{ /*n no binary wo index bun migi ni zurasubaai saigoni hyoji sareru moji*/
+	if (index > 64)/*index wa 64bytes ika dakara*/
 		return (-1);
-	n >>= index;
-	if ((n & 1) == 1)
-		return (1);
-	return (0);
+	return ((n >> index) & 1);/*cn & 1 = saigo kara hyoji*/
 }
