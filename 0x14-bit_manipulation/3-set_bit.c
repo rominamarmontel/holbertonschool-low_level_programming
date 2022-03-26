@@ -8,12 +8,9 @@
 */
 
 int set_bit(unsigned long int *n, unsigned int index)
-{
-	unsigned int i = 1;
-
-	if (index > (sizeof(n) * 8))
+{/*shitei sareta index de bit no atai wo 1 ni settei*/
+	if (!n || index > 64)/*n ga null matawa 64byte ijo no baai*/
 		return (-1);
-	i <<= index;
-	*n |= i;
+	*n = *n | (1 << index);/*0001 wo index bun hidari ni 1 zurashita baai*/
 	return (1);
 }
