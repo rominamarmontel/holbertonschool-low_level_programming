@@ -6,11 +6,13 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *temp = head;
+	listint_t *temp;
 
-	if (head != NULL)
+	if (head == NULL)
+		return;
+	while (head != NULL)
 	{
-		head = head->next;
+		temp = head->next;
 		free(temp);
 		head = temp;
 	}
