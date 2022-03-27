@@ -6,15 +6,15 @@
  */
 int sum_listint(listint_t *head)
 {
+	listint_t *temp = head;
 	int i;
-	listint_t *tmp = head;
 
 	if (head == NULL)
 		return (0);
-	for (i = 0; tmp != NULL;)
+	for (i = 0; temp != NULL;)
 	{
-		i += tmp->n;/*tmp no data n wo tasu*/
-		temp = tmp->next;/*temp wo susumeru*/
+		i += temp->n;/*temp no deata wo i kai tasu*/
+		temp = temp->next;/*temp wo susumeru*/
 	}
 	return (i);
 }
