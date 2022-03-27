@@ -7,8 +7,8 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp = *head;
-	listint_t *del;
+	listint_t *avant = *head;
+	listint_t *apres;/*index node no ushiro no node*/
 	unsigned int i;
 
 	if ((*head) == NULL)
@@ -16,20 +16,20 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (index == 0)
 	{
 		*head = (*head)->next;
-		free(temp);
+		free(avant);/*head no kawari ni avant wo free*/
 		return (1);
 	}
 	else
 	{
-		for (i = 0; i < (index - 1); i++)
+		for (i = 0; i < (index - 1); i++)/*index yori 1tsu mae de deru*/
 		{
-			if (temp == NULL)
+			if (avant == NULL)
 				return (-1);
-			temp = temp->next;
+			avant = avant->next;
 		}
-		del = temp->next;
-		temp->next = del->next;
+		apres = avant->next;/*apres no adress ni avant->next wo ireru*/
+		avant->next = apres->next;/*avant->next wo apres->next ni kaeru*/
 	}
-	free(del);
+	free(apres);
 	return (1);
 }
