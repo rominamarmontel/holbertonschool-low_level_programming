@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,36 +8,43 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	char buffer[1024];
-	int fdfrom, fdto, clofrom, cloto;
-	int wt, rd;
+	int openfrom, opento, r, w, closeto, closefrom;
+	char str[1024];
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-	fdfrom = open(argv[1], O_RDONLY);
-	if (fdfrom == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-	exit(98);
-	fdto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fdto == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	while ((rd = read(fdfrom, buffer, 1024)) > 0)
+
+	openfrom = open(argv[1], O_RDONLY);
+	if (openfrom == -1)
 	{
-		wt = write(fdto, buffer, rd);
-		if (wt == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-	if (rd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-	exit(98);
-	clofrom = close(fdfrom);
-	if (clofrom == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdfrom), exit(100);
-	cloto = close(fdto);
-	if (cloto == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdto), exit(100);
+		exit(98);
+	}
+
+	opento = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (opento == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	while ((r = read(openfrom, str, 1024)) > 0)
+	{
+		w = write(opento, str, r);
+		if (w == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	}
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+
+	closefrom = close(openfrom);
+	if (closefrom == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", openfrom), exit(100);
+
+	closeto = close(opento);
+	if (closeto == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", opento), exit(100);
+
 	return (0);
 }
