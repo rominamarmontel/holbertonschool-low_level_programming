@@ -8,7 +8,7 @@
  * Return: 0
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int openfrom, opento, r, w, closeto, closefrom;
 	char str[1024];
