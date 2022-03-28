@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	while ((rd = read(file_from, buffer, 1024)) > 0)
 	{
 		wt = write(file_to, buffer, rd);
-		if (wt != rd || wt == -1)
+		if (wt == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
