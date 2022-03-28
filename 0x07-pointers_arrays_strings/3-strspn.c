@@ -5,7 +5,7 @@
  * @accept: sequence of characters
  * Return: count/number of character
  */
-
+/*文字列s1の先頭から順に調べ、s2に含まれている文字の並びのいずれかの文字が何文字続くかを返す*/
 unsigned int _strspn(char *s, char *accept)
 {
 	int i;
