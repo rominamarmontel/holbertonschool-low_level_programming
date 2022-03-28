@@ -5,7 +5,7 @@
  * @accept: character specified
  * Return: the address of the first character or NULL
  */
-
+/*文字列s1で、文字群s2中のいずれかの文字が見つかった最初の位置（ポインタ）を返却*/
 char *_strpbrk(char *s, char *accept)
 {
 	int i = 0;
