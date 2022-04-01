@@ -6,15 +6,15 @@
  * @av: array of strings
  */
 
-int main(int ac, char **av)
+int main()
 {
+	char **av = NULL;
 	int i;
-	int n;
 
-	for (i = 0; i < av[n]; i++)
+	for (i = 0; av[i] != '\0'; i++)
 	{
-		(void)*ac;
-		printf("%d\n", av[n]);
+		printf("%s\n", av[i]);
 	}
 	return (0);
 }
+

@@ -6,6 +6,7 @@
  * @line: string
  * @len: length
  * @lineSize: size of length
+ * Return: 0
  */
 
 int main(void)
