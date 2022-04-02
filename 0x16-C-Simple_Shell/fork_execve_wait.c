@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 int main(void)
-{/*execute the commad*/
+{/*execute the command*/
     char *argv[] = {"/bin/ls", "-l", "/tmp", NULL};
     pid_t id;/*parent id*/
     int i;
