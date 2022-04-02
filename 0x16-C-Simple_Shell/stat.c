@@ -1,28 +1,36 @@
+#include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
-#include <stdio.h>
-#include<string.h>
-#include <errno.h>
+
 /**
- * stat - display file status
- * Return: 0
+ * main - stat example
+ *
+ * Return: Always 0.
  */
-int main(void)
+int main(int ac, char **av)
 {
-    struct dirent *de;  // Pointer for directory entry
-    // opendir() returns a pointer of DIR type. 
-    DIR *dr = opendir(".");
-  
-    if (dr == NULL)  // opendir returns NULL if couldn't open directory
+    unsigned int i;
+    struct stat st;
+
+    if (ac < 2)
     {
-        printf("Could not open current directory" );
-        return 0;
+        printf("Usage: %s path_to_file ...\n", av[0]);
+        return (1);
     }
-    // for readdir()
-    while ((de = readdir(dr)) != NULL)
-            printf("%s\n", &de);
-  
-    closedir(dr);    
-    return 0;
+    i = 1;
+    while (av[i])
+    {
+        printf("%s:", av[i]);
+        if (stat(av[i], &st) == 0)
+        {
+            printf(" FOUND\n");
+        }
+        else
+        {
+            printf(" NOT FOUND\n");
+        }
+        i++;
+    }
+    return (0);
 }
