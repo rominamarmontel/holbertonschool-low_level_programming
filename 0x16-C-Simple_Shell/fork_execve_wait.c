@@ -1,29 +1,31 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <unistd.h>
-
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+/**
+ * main - function fork, execve, wait
+ * Return: 0
+ * Write a program that executes the command ls -l /tmp 
+ * in 5 different child processes
+ */
 int main(void)
 {/*execute the command*/
     char *argv[] = {"/bin/ls", "-l", "/tmp", NULL};
-    pid_t id;/*parent id*/
+    pid_t pid;/*child id*/
     int i;
 
     for (i = 0; i < 5; i++)
     {
-        id = fork();/*create process*/
-        if (id != 0)/*if parent is NULL*/
-        {
+        pid = fork();/*create process*/
+        if (pid != 0)/*if parent is NULL*/
+        {/*Wait for a father to exit before creating a new child*/
             wait(NULL);
         }
         else
         {
-            printf("I am a %d and my father is %d\n", id, getppid());
-            if (execve(argv[0], argv, NULL) == -1)/*if no array, argument*/
-            {
-                perror("Error\n");
-            }
-
+            execve(argv[0], argv, NULL);/*if no array, argument*/
+            exit(0);
         }
     }
     return (0);

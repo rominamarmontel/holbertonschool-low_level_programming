@@ -20,5 +20,5 @@ int main(void)
 		fwrite(line, lineSize, 1, stdout);
 	printf("%s \n", line);
 	free(line);
-	return 0;
+	return (0);
 }

@@ -31,18 +31,12 @@
                 free(line);
                 return (0);
             }
-            line[lineSize - 1] = '\0';
-            delim = strtok(line, " ");
+            line[lineSize - 1] = '\0';/*put NULL at the last of line*/
+            delim = strtok(line, " ");/*delimitation with space*/
             for (i = 0; delim != NULL; i++)
             {
                 argv[i] = delim;
                 delim = strtok(NULL, " ");
-            }
-            if (id == 0)
-            {
-            id = getpid();
-            printf("%d\n", id);
-            return (0);
             }
             argv[i] = NULL;
             if (execve(argv[0], argv, NULL) == -1)/*if no array, argument*/

@@ -8,13 +8,11 @@
  */
 int main(void)
 {
-    int p_id, p_pid;
+    int p_id;
 
-    p_id = getpid(); /*process id*/
-    p_pid = getppid(); /*parent process id*/
+    p_id = getpid(); /*Parent process id*/
 
-    printf("Process ID: %d\n", p_id);
-    printf("Parent Process ID: %d\n", p_pid);
+    printf("%d\n", p_id);
 
     return 0;
 }

@@ -10,8 +10,15 @@
 #include <string.h>
 
 
-int main(int ac, char **av);
-int main(int ac, char **av, char **env);    
+typedef struct list_s
+{
+    char *str;
+    struct list_s *next;
+} list_t;
+
+extern char **environ;
+
+list_t *add_node_end(list_t **head, const char *str);
 char *_getenv(const char *name);
 int _setenv(const char *name, const char *value, int overwrite);
 int _unsetenv(const char *name);

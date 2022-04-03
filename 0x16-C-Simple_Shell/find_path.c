@@ -1,28 +1,20 @@
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
+#include <dirent.h>
 #include <stdio.h>
-#include<string.h>
-#include <errno.h>
 /**
- * stat - display file status
+ * main - looks for files in the current PATH
  * Return: 0
  */
-int main(void)
-{
-    struct dirent *de;  // Pointer for directory entry
-    // opendir() returns a pointer of DIR type. 
-    DIR *dr = opendir(".");
-  
-    if (dr == NULL)  // opendir returns NULL if couldn't open directory
-    {
-        printf("Could not open current directory" );
-        return 0;
+int main(void) {
+    DIR *d;
+    struct dirent *dir;
+    d = opendir(".");
+    
+    if (d) {
+        while ((dir = readdir(d)) != NULL) 
+        {
+            printf("%s\n", dir->d_name);
+        }
+    closedir(d);
     }
-    // for readdir()
-    while ((de = readdir(dr)) != NULL)
-            printf("%s\n", &de);
-  
-    closedir(dr);    
-    return 0;
+    return(0);
 }

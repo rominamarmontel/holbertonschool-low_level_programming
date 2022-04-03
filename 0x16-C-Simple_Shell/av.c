@@ -6,14 +6,14 @@
  * @av: array of strings
  */
 
-int main()
+int main(int ac, char **av)
 {
-	char **av = NULL;
-	int i;
+	int i = 0;
 
-	for (i = 0; av[i] != '\0'; i++)
+	while (av[i])
 	{
-		printf("%s\n", av[i]);
+		printf("av[%d] = %s\n", i, av[i]);
+		i++;
 	}
 	return (0);
 }
