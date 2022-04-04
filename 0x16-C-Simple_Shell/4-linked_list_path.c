@@ -9,11 +9,5 @@ int main(void)
     int i;
     size_t h;
 
-    *str = *getenv("PATH");
-	for (i = 0; h != NULL; i++)
-	{
-		printf("%s\n", h->str);
-		h = h->next;
-	}
 	return (i);
 }
