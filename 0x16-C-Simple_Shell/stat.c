@@ -15,7 +15,7 @@ int main(int ac, char **av)
 
     if (ac < 2)
     {
-        printf("Usage: %s path_to_file ...\n", av[0]);
+        printf("Usage: %s file ...\n", av[0]);
         return (1);
     }
     i = 1;

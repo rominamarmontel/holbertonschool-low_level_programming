@@ -18,13 +18,13 @@ int main(void)
     for (i = 0; i < 5; i++)
     {
         pid = fork();/*create process*/
-        if (pid != 0)/*if parent is NULL*/
+        if (pid != 0)/*if child is NULL*/
         {/*Wait for a father to exit before creating a new child*/
             wait(NULL);
         }
         else
         {
-            execve(argv[0], argv, NULL);/*if no array, argument*/
+            execve(argv[0], argv, NULL);/*if no array, no argument*/
             exit(0);
         }
     }

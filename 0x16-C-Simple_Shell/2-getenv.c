@@ -5,13 +5,32 @@
  */
 char *_getenv(const char *name)
 {
-    extern char **environ;
+	extern char **environ;
 	int i;
+	char delim[] = "=";
+	char *token;
+	char *val;
 
 	for (i = 0; environ[i]; i++)
-	{
-        printf("%s\n", environ[i]);
+	{	
+		token = strtok(environ[i], delim);
+		val = token;
+		while (token != NULL)
+		{
+			  token = strtok(NULL, delim); /*token suite*/
+			  if (strcmp(name, val) == 0)
+			  {
+	  			printf("%s\n", token);
+	    		return (token);
+			  } 
+		}
 	}
-	return (0);
+	return (NULL);  
+}
+  
+int main(void)
+{
+  _getenv("PATH");
+  return (0);
 }
 
