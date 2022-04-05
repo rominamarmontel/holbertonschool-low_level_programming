@@ -1,19 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - prints the environment
+ * main - builds a linked list of the PATH directories
  *
  * Return: Always 0.
  */
-int main(int ac, char **av, char **env)
+int main(void)
 {
-    unsigned int i;
+	char *token;
+	char *parse = NULL;
+	list_t *head;
 
-    i = 0;
-    while (env[i] != NULL)
-    {
-        printf("%s\n", env[i]);
-        i++;
-    }
-    return (0);
+	head = NULL;
+	parse = _getenv("PATH");
+	token = strtok(parse, ":");
+	while (token != NULL)
+	{
+		printf("%s\n", token);
+		add_node_end(&head, token);
+		token = strtok(NULL, ":");
+	}
+	return (0);
 }

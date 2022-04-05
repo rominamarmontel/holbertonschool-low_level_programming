@@ -9,17 +9,16 @@
 #include <unistd.h>
 #include <string.h>
 
-typedef struct list_s
-{
-    char *str;
-    struct list_s *next;
-} list_t;
+typedef struct listpath {
+	char *str;
+	struct listpath *next;
+} listpath_t;
 
 extern char **environ;
 
-list_t *add_node_end(list_t **head, const char *str);
-char *getenv(const char *name);
-int setenv(const char *name, const char *value, int overwrite);
-int unsetenv(const char *name);
+listpath_t *add_node_end(listpath_t **head, char *str);
+char *_getenv(const char *name);
+int _setenv(const char *name, const char *value, int overwrite);
+int _unsetenv(const char *name);
 
 #endif

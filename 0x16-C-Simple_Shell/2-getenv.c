@@ -2,6 +2,7 @@
 /**
  * getenv - environment variable functions
  * Return: 0
+ * 単一の環境変数とその値を取得
  */
 char *_getenv(const char *name)
 {
