@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 	char min;
 	int time;
 
-	for (time = '1'; time <= '9'; time++)
+	for (time = '0'; time <= '9'; time++)
 	{
 		for (min = 'a'; min <= 'z'; min++)
 		{
