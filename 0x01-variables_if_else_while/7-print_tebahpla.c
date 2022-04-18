@@ -11,11 +11,16 @@
 int main(void)
 {
 	char min;
+	int i;
 
-	for (min = 'z'; min >= 'a'; min--)
+	for (i = '0'; i <= '9'; i++)
+	{
+		putchar(i);
+	}
+	for (min = 'a'; min <= 'f'; min++)
 	{
 		putchar(min);
 	}
-	putchar('\n');
+	puthcar('\n');
 	return (0);
 }
