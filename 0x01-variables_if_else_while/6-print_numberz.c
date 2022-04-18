@@ -10,11 +10,11 @@
 
 int main(void)
 {
-	int n; /* you are not allowed to use type char */
+	int i;
 
-	for (n = 48; n <= 57; n++)
+	for (i = '0'; i <= '9'; i++)
 	{
-		putchar(n);
+		putchar(i);
 	}
 	putchar('\n');
 	return (0);
