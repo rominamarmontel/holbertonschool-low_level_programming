@@ -10,14 +10,13 @@
 
 int main(void)
 {
-	char c;
+	char min;
 
-	for (c = 97; c <= 122; c++)
-		if (c != 113 && c != 101)
-		{
-			putchar(c);
-		}
+	for (min = 'a'; min <= 'z'; min++)
+	{
+		if (min != 'q' && min != 'e')
+		putchar(min);
+	}
 	putchar('\n');
 	return (0);
-
 }
