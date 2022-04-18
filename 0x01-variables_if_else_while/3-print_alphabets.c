@@ -13,14 +13,14 @@ int main(void)
 	char min;
 	char maj;
 
-	for (min = 97; min <= 122; min++)
+	for (min = 'a'; min <= 'z'; min++)
 	{
 		putchar(min);
 	}
-	for (maj = 65; maj <= 90; maj++)
-	{
-		putchar(maj);
-	}
-	putchar('\n');
-	return (0);
+		for (maj = 'A'; maj <= 'Z'; maj++)
+		{
+			putchar(maj);
+		}
+		putchar('\n');
+		return (0);
 }
