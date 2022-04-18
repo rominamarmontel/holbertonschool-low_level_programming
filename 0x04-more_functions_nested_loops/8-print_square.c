@@ -7,18 +7,16 @@
 
 void print_square(int size)
 {
+	int x;
 	int y;
-	int t;
 
 	if (size <= 0)
-	{
 		_putchar('\n');
-	}
 	else
 	{
-		for (y = 0; y < size; y++)
+		for (x = 0; x < size; x++)
 		{
-			for (t = 0; t < size; t++)
+			for (y = 0; y < size; y++)
 			{
 				_putchar('#');
 			}
@@ -26,3 +24,4 @@ void print_square(int size)
 		}
 	}
 }
+
