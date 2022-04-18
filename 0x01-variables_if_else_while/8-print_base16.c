@@ -10,18 +10,14 @@
 
 int main(void)
 {
-	int n = 48;
-	int a = 97;
+	int i;
 
-	while (n <= 57)
+	for (i = '0'; i <= '9'; i++)
 	{
-		putchar(n);
-		n++;
-	}
-	while (a <= 102)
-	{
-		putchar(a);
-		a++;
+		putchar(i);
+		if (i < '9')
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
