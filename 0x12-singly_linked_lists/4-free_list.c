@@ -7,13 +7,14 @@
 
 void free_list(list_t *head)
 {
-	list_t *temp;
+	list_t *temp = head;/*temp wo sento ni ichi*/
 
-	while (head != NULL)
+	while (head != NULL)/*NULL ni tassurumade loop*/
 	{
-		temp = head->next;/*temp no adress ni head->next wo ireru*/
+		temp = head->next;/*head->next noichi wo copy shite temp ni hozon*/
 		free(head->str);
 		free(head);
-		head = temp;
+		head = temp;/*sento ni p no yoso wo copy*/
 	}
+	free(temp);
 }
