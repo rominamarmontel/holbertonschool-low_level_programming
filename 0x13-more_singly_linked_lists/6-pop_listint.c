@@ -8,15 +8,17 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *temp = *head;
+	listint_t *temp;
 	int i;
 
-	if (head == NULL || *head == NULL)
+	if (*head == NULL)
+	{
 		return (0);
-	else
-		i = (*head)->n;
-		temp = (*head)->next;
-		free(*head);
-		*head = temp;
+	}
+	temp = *head;/*temp wo head ni awaseru*/
+	i = (*head)->n;/*i ni head no  wo ireru*/
+	temp = (*head)->next;/*temp ni head no adress wo ireru*/
+	free(*head);/*head wo sakujo*/
+	*head = temp;/*temp wo head ni ireru*/
 	return (i);
 }
