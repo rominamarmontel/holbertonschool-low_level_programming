@@ -1,6 +1,6 @@
-0x1A. C - Hash tables
+# 0x1A. C - Hash tables
 
-Learning Objectives
+### Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 General
@@ -12,7 +12,7 @@ General
     What are the advantages and drawbacks of using hash tables
     What are the most common use cases of hash tables
 
-More Info
+### More Info
 Data Structures
 
 Please use these data structures for this project:
@@ -47,8 +47,8 @@ typedef struct hash_table_s
 } hash_table_t;
 
 
-Tasks
-0. >>> ht = {}
+## Tasks
+### 0. >>> ht = {}
 mandatory
 
 Write a function that creates a hash table.
@@ -57,7 +57,7 @@ Write a function that creates a hash table.
         where size is the size of the array
     Returns a pointer to the newly created hash table
     If something went wrong, your function should return NULL
-
+```
 julien@ubuntu:~/0x1A. Hash tables$ cat 0-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -103,21 +103,21 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./a
 ==7602== For counts of detected and suppressed errors, rerun with: -v
 ==7602== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x1A. Hash tables$
-
+```
 Repo:
 
     GitHub repository: holbertonschool-low_level_programming
     Directory: 0x1A-hash_tables
     File: 0-hash_table_create.c
 
-1. djb2
+### 1. djb2
 mandatory
 
 Write a hash function implementing the djb2 algorithm.
 
     Prototype: unsigned long int hash_djb2(const unsigned char *str);
     You are allowed to copy and paste the function from this page
-
+```
 julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c 
 unsigned long int hash_djb2(const unsigned char *str)
 {
@@ -161,14 +161,14 @@ julien@ubuntu:~/0x1A. Hash tables$ ./b
 3749890792216096085
 5861846
 julien@ubuntu:~/0x1A. Hash tables$ 
-
+```
 Repo:
 
     GitHub repository: holbertonschool-low_level_programming
     Directory: 0x1A-hash_tables
     File: 1-djb2.c
 
-2. key -> index
+### 2. key -> index
 mandatory
 
 Write a function that gives you the index of a key.
@@ -179,7 +179,7 @@ Write a function that gives you the index of a key.
     This function should use the hash_djb2 function that you wrote earlier
     Returns the index at which the key/value pair should be stored in the array of the hash table
     You will have to use this hash function for all the next tasks
-
+```
 julien@ubuntu:~/0x1A. Hash tables$ cat 2-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -217,14 +217,14 @@ julien@ubuntu:~/0x1A. Hash tables$ ./c
 5861846
 470
 julien@ubuntu:~/0x1A. Hash tables$ 
-
+```
 Repo:
 
     GitHub repository: holbertonschool-low_level_programming
     Directory: 0x1A-hash_tables
     File: 2-key_index.c
 
-3. >>> ht['betty'] = 'cool'
+### 3. >>> ht['betty'] = 'cool'
 mandatory
 
 Write a function that adds an element to the hash table.
@@ -235,7 +235,7 @@ Write a function that adds an element to the hash table.
         and value is the value associated with the key. value must be duplicated. value can be an empty string
     Returns: 1 if it succeeded, 0 otherwise
     In case of collision, add the new node at the beginning of the list
-
+```
 julien@ubuntu:~/0x1A. Hash tables$ cat 3-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -267,14 +267,14 @@ If you want to test for collisions, here are some strings that collide using the
     joyful collides with synaphea
     redescribed collides with urites
     dram collides with vivency
-
+```
 Repo:
 
     GitHub repository: holbertonschool-low_level_programming
     Directory: 0x1A-hash_tables
     File: 3-hash_table_set.c
 
-4. >>> ht['betty']
+### 4. >>> ht['betty']
 mandatory
 
 Write a function that retrieves a value associated with a key.
@@ -283,7 +283,7 @@ Write a function that retrieves a value associated with a key.
         where ht is the hash table you want to look into
         and key is the key you are looking for
     Returns the value associated with the element, or NULL if key couldn’t be found
-
+```
 julien@ubuntu:~/0x1A. Hash tables$ cat 4-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -339,14 +339,14 @@ Betty:Cool
 c:isfun
 javascript:(null)
 julien@ubuntu:~/0x1A. Hash tables$ 
-
+```
 Repo:
 
     GitHub repository: holbertonschool-low_level_programming
     Directory: 0x1A-hash_tables
     File: 4-hash_table_get.c
 
-5. >>> print(ht)
+### 5. >>> print(ht)
 mandatory
 
 Write a function that prints a hash table.
@@ -357,7 +357,7 @@ Write a function that prints a hash table.
         Order: array, list
     Format: see example
     If ht is NULL, don’t print anything
-
+```
 julien@ubuntu:~/0x1A. Hash tables$ cat 5-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -390,21 +390,21 @@ julien@ubuntu:~/0x1A. Hash tables$ ./f
 {}
 {'Betty': 'Cool', 'python': 'awesome', 'Bob': 'and Kris love asm', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Asterix': 'Obelix'}
 julien@ubuntu:~/0x1A. Hash tables$ 
-
+```
 Repo:
 
     GitHub repository: holbertonschool-low_level_programming
     Directory: 0x1A-hash_tables
     File: 5-hash_table_print.c
 
-6. >>> del ht
+### 6. >>> del ht
 mandatory
 
 Write a function that deletes a hash table.
 
     Prototype: void hash_table_delete(hash_table_t *ht);
         where ht is the hash table
-
+```
 julien@ubuntu:~/0x1A. Hash tables$ cat 6-main.c 
 #include <stdlib.h>
 #include <string.h>
@@ -464,3 +464,4 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./g
 ==6621== For counts of detected and suppressed errors, rerun with: -v
 ==6621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 julien@ubuntu:~/0x1A. Hash tables$ 
+```
