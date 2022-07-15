@@ -5,8 +5,8 @@
 def island_perimeter(grid):
     """This module returns the perimeter of the island described in grid"""
     perimetre = 0
-    for col in range(0, 5):
-        for row in range(len(grid)):
+    for col in range(len(grid)):
+        for row in range(0, 6):
             if grid[col][row] == 1:
                 if grid[col - 1][row] != 1:
                     perimetre += 1
