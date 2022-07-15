@@ -10,11 +10,11 @@ def island_perimeter(grid):
             if grid[col][row] == 1:
                 if grid[col - 1][row] != 1:
                     perimetre += 1
-                if grid[col][row -1] != 1:
+                if grid[col][row - 1] != 1:
                     perimetre += 1
             elif grid[col][row] == 0:
                 if grid[col - 1][row] != 0:
                     perimetre += 1
-                if grid[col][row -1] != 0:
+                if grid[col][row - 1] != 0:
                     perimetre += 1
     return perimetre
