@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""This module defines the function island_perimeter"""
+
+
 def island_perimeter(grid):
+    """This module defines the function island_perimeter"""
     perimetre = 0
     for col in range(0, 5):
         for row in range(0, 6):
