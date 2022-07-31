@@ -4,8 +4,11 @@
  * @s: string
  * @accept: sequence of characters
  * Return: count/number of character
+ *
+ *文字列s1の先頭から順に調べ、
+ *s2に含まれている文字の並びの
+ *いずれかの文字が何文字続くかを返す
  */
-/*文字列s1の先頭から順に調べ、s2に含まれている文字の並びのいずれかの文字が何文字続くかを返す*/
 unsigned int _strspn(char *s, char *accept)
 {
 	int i;
@@ -14,11 +17,11 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (i = 0; s[i] != '\0'; i++) /* size of s */
 	{
-		if (count != i) /*if count is not in s */
-			break;
 		for (j = 0; accept[j] != '\0'; j++) /* size of j */
 		{
-			if (s[i] == accept[j])
+			if (count != i) /*if count is not in s */
+				break;
+			else if (s[i] == accept[j])
 				count++;
 		}
 	}
