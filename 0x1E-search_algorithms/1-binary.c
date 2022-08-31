@@ -11,10 +11,10 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	int min = 0;
-	int max = size - 1;
-	int mid;
-	int i;
+	size_t min = 0;
+	size_t max = size - 1;
+	size_t mid;
+	size_t i;
 
 	if (array == NULL || size == 0)
 		return (-1);
