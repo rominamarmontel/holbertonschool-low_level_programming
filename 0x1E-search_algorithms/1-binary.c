@@ -11,15 +11,15 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t min = 0;
-	size_t max = size - 1;
-	size_t mid;
-	size_t i;
+	int min = 0;
+	int max = size - 1;
+	int mid;
+	int i;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
-	while (min < max)
+	while (min <= max)
 	{
 		printf("Searching in array: ");
 		for (i = min; i <= max; i++)
